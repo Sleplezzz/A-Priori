@@ -1,0 +1,512 @@
+/* ==========================================================================
+    A Priori — Estilos de la página principal (index.html)
+   ========================================================================== */
+
+/* ---- Variables ---- */
+:root {
+    --navy-900: #2E3257;      /* footer, botones primarios, títulos */
+    --navy-800: #373C66;      /* barra superior del header */
+    --purple-500: #6067A4;    /* fondo del hero */
+    --lavender-400: #acb0c9;  /* tarjeta activa del carrusel */
+    --lavender-500: #9498b4;  /* badge del carrusel */
+    --gray-100: #dedee4;      /* fondo de secciones claras */
+    --gray-200: #f4f4f6;
+    --white: #ffffff;
+    --text-body: #3d3d3d;
+    --text-muted: #55597a;
+    --text-on-dark: #c7c8da;
+
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-pill: 999px;
+
+    --shadow-card: 0 10px 25px rgba(46, 51, 87, 0.12);
+    --container-width: 1140px;
+
+    --font-base: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+/* ---- Reset básico ---- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-base);
+    color: var(--text-body);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+h1, h2, h3 {
+    color: var(--navy-900);
+    line-height: 1.25;
+    margin: 0 0 16px;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* ---- Botones ---- */
+.btn-primary,
+.btn-nav {
+    display: inline-block;
+    font-family: var(--font-base);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-primary {
+    background-color: var(--navy-900);
+    color: var(--white);
+    padding: 18px 40px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+.btn-nav {
+    background-color: var(--white);
+    color: var(--navy-900);
+    padding: 12px 28px;
+    border-radius: var(--radius-pill);
+}
+
+.btn-nav:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+    Header / Navegación
+   ========================================================================== */
+.site-header {
+    background-color: var(--navy-800);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--text-on-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+    color: var(--white);
+}
+
+/* ==========================================================================
+    Hero (Sección Inicio)
+   ========================================================================== */
+.hero {
+    background-color: var(--purple-500);
+    text-align: center;
+    padding: 100px 24px;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    color: var(--text-on-dark);
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+}
+
+/* ==========================================================================
+    Producto — ¿Por qué A Priori? (Carrusel)
+   ========================================================================== */
+.por-que-apriori {
+    padding: 90px 0;
+    background-color: var(--white);
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    position: relative;
+    flex: 1;
+    min-height: 260px;
+}
+
+.carousel-card {
+    display: none;
+    background-color: var(--lavender-400);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+}
+
+.carousel-card.active {
+    display: block;
+    animation: fade-in 0.4s ease;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--lavender-500);
+    color: var(--navy-900);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 22px;
+    border-radius: var(--radius-pill);
+    margin: 0 auto 24px;
+}
+
+.carousel-card > .badge {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-card-body {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.carousel-card-text {
+    flex: 1;
+}
+
+.carousel-card-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.carousel-card-text p {
+    color: var(--navy-900);
+    margin-bottom: 0;
+}
+
+.carousel-card-icon {
+    flex-shrink: 0;
+    width: 130px;
+}
+
+.carousel-card-icon img,
+.carousel-card-icon svg {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-btn {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--gray-100);
+    background-color: var(--white);
+    color: var(--navy-900);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.carousel-btn:hover {
+    background-color: var(--gray-100);
+    transform: scale(1.05);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--gray-100);
+}
+
+.dot.active {
+    background-color: var(--lavender-500);
+}
+
+/* ==========================================================================
+    Tarjetas reutilizables (Beneficios / Para quién)
+   ========================================================================== */
+.beneficios {
+    background-color: var(--gray-100);
+    padding: 90px 0;
+}
+
+.para-quien {
+    background-color: var(--gray-100);
+    padding: 90px 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: 40px 28px;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.card-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Para-quien: el ícono va después del texto, sin margen extra arriba */
+.para-quien .card p {
+    margin-bottom: 28px;
+}
+
+/* ==========================================================================
+    ¿Cómo funciona?
+   ========================================================================== */
+.como-funciona {
+    padding: 90px 0;
+    background-color: var(--white);
+}
+
+.pasos-container {
+    counter-reset: paso;
+    max-width: 640px;
+    margin: 56px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    text-align: center;
+}
+
+.pasos-container li {
+    counter-increment: paso;
+}
+
+.pasos-container h3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.pasos-container h3::before {
+    content: counter(paso) ".";
+    color: var(--navy-900);
+    font-weight: 800;
+}
+
+.pasos-container p {
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+    Footer
+   ========================================================================== */
+.site-footer {
+    background-color: var(--navy-900);
+    padding: 28px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    color: var(--text-on-dark);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+    Responsive
+   ========================================================================== */
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carousel-card-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carousel-card-icon {
+        width: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-inner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .site-nav {
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-wrapper {
+        gap: 12px;
+    }
+
+    .carousel-card {
+        padding: 28px 20px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

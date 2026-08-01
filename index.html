@@ -1,102 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>A Priori</title>
+        <title>A Priori — Ejecución de metas con IA</title>
+        <meta name="description" content="Transforma tus metas en pasos diarios y alcanzables con la ayuda de la Inteligencia Artificial.">
+
+        <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/styles/styles.css">
     </head>
     <body>
-        <header>
-            <h1>A Priori</h1>
-            <nav>
-                <ul>
-                    <li><a href="#Inicio">Inicio</a></li>
-                    <li><a href="#por-que-apriori">Producto</a></li>
-                    <li><a href="#Como-funciona">¿Cómo funciona?</a></li>
-                    <li><a href="#Para-quien">Comunidad</a></li>
-                    <li><a href="login.html" class="btn-nav">Acceder</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="Inicio" class="hero">
-                <h2>Ejecución de metas con IA</h2>
-                <p>Transforma tus metas en pasos diarios y alcanzables. Sobrevuela el bloqueo mental, deja de postergar y da el primer paso hoy con la ayuda de la Inteligencia Artificial.</p>
-                <a href="register.html">
-                    <button>Comenzar ahora</button>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="#Inicio" class="logo">
+                    <img src="assets/images/logo.png" alt="" class="logo-icon">
+                    <span>A Priori</span>
                 </a>
+
+                <nav class="site-nav">
+                    <ul class="nav-links">
+                        <li><a href="#Inicio">Inicio</a></li>
+                        <li><a href="#por-que-apriori">Producto</a></li>
+                        <li><a href="#Como-funciona">¿Cómo funciona?</a></li>
+                        <li><a href="#Para-quien">Comunidad</a></li>
+                    </ul>
+                    <a href="login.html" class="btn-nav">Acceder</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Sección Inicio (Hero) -->
+            <section id="Inicio" class="hero">
+                <div class="container hero-content">
+                    <h1>Ejecución de metas con IA</h1>
+                    <p>Transforma tus metas en pasos diarios y alcanzables. Sobrevuela el bloqueo mental, deja de postergar y da el primer paso hoy con la ayuda de la Inteligencia Artificial.</p>
+                    <a href="register.html" class="btn-primary">Comenzar ahora</a>
+                </div>
             </section>
+
+            <!-- Sección Producto: ¿Por qué A Priori? (Carrusel) -->
             <section class="por-que-apriori" id="por-que-apriori">
                 <div class="container">
                     <div class="section-title">
                         <h2>¿Por qué A Priori?</h2>
                     </div>
-                    <!-- carrusel -->
-                    <div class="carousel-container">
-                    
-                        <!-- Card 1: El Problema -->
-                        <div class="carousel-card active">
-                            <span class="badge problem">El Desafío</span>
-                            <h3>Parálisis por Análisis</h3>
-                            <p>Tienes metas grandes, pero cuando te sientas a trabajar, no sabes por dónde empezar. La falta de un primer paso claro genera parálisis y esa aversión que te hace postergar lo importante.</p>
+
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn btn-prev" aria-label="Anterior">&lt;</button>
+
+                        <div class="carousel-container">
+
+                            <!-- Card 1: El Problema -->
+                            <div class="carousel-card active">
+                                <span class="badge problem">El Desafío</span>
+                                <div class="carousel-card-body">
+                                    <div class="carousel-card-text">
+                                        <h3>Parálisis por Análisis</h3>
+                                        <p>Tienes metas grandes, pero cuando te sientas a trabajar, no sabes por dónde empezar. La falta de un primer paso claro genera parálisis y esa aversión que te hace postergar lo importante.</p>
+                                    </div>
+                                    <div class="carousel-card-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="10" y="44" width="44" height="4" rx="2" fill="#2E3357"/>
+                                            <rect x="16" y="30" width="32" height="14" rx="2" fill="#fff" stroke="#2E3357" stroke-width="2.5"/>
+                                            <circle cx="32" cy="18" r="9" fill="#fff" stroke="#2E3357" stroke-width="2.5"/>
+                                            <path d="M29 18a3 3 0 1 1 3 3" stroke="#2E3357" stroke-width="2" stroke-linecap="round"/>
+                                            <circle cx="32" cy="23.5" r="0.8" fill="#2E3357"/>
+                                            <path d="M12 20l3 2M52 20l-3 2M14 34l3-3M50 34l-3-3" stroke="#6069A4" stroke-width="2.5" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: La Solución -->
+                            <div class="carousel-card">
+                                <span class="badge solution">La Solución</span>
+                                <div class="carousel-card-body">
+                                    <div class="carousel-card-text">
+                                        <h3>Ejecución Guiada por IA</h3>
+                                        <p>A Priori descompone tu objetivo en etapas simples y te entrega únicamente el siguiente paso ejecutable para hoy.</p>
+                                    </div>
+                                    <div class="carousel-card-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M32 6C20 6 12 14 12 25c0 7 3 11 6 14v7a3 3 0 0 0 3 3h6" stroke="#2E3357" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M32 6c12 0 20 8 20 19 0 7-3 11-6 14v7a3 3 0 0 1-3 3h-6" stroke="#6069A4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M25 55h14" stroke="#2E3357" stroke-width="3" stroke-linecap="round"/>
+                                            <circle cx="32" cy="27" r="12" fill="#fff" stroke="#2E3357" stroke-width="2.5"/>
+                                            <path d="M26 27l4 4 8-8" stroke="#3FA96A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: El Resultado -->
+                            <div class="carousel-card">
+                                <span class="badge result">El Resultado</span>
+                                <div class="carousel-card-body">
+                                    <div class="carousel-card-text">
+                                        <h3>Claridad y Enfoque Total</h3>
+                                        <p>Avanzas sin sobrecarga cognitiva, convirtiendo intenciones abstractas en progreso constante y medible.</p>
+                                    </div>
+                                    <div class="carousel-card-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M32 6a14 14 0 0 0-8 25.5V37a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-5.5A14 14 0 0 0 32 6Z" fill="#FFD866" stroke="#2E3357" stroke-width="2.5" stroke-linejoin="round"/>
+                                            <path d="M27 45h10M28 50h8" stroke="#2E3357" stroke-width="3" stroke-linecap="round"/>
+                                            <path d="M32 2v4M14 10l3 3M50 10l-3 3M8 27h4M56 27h-4" stroke="#2E3357" stroke-width="2.5" stroke-linecap="round"/>
+                                            <circle cx="40" cy="42" r="11" fill="#fff" stroke="#2E3357" stroke-width="2.5"/>
+                                            <path d="M35.5 42.5l3 3 6-6" stroke="#3FA96A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <line x1="47.8" y1="49.8" x2="53" y2="55" stroke="#2E3357" stroke-width="3" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                    
-                        <!-- Card 2: La Solución -->
-                        <div class="carousel-card">
-                            <span class="badge solution">La Solución</span>
-                            <h3>Ejecución Guiada por IA</h3>
-                            <p>A Priori descompone tu objetivo en etapas simples y te entrega únicamente el siguiente paso ejecutable para hoy.</p>
-                        </div>
-                    
-                        <!-- Card 3: El Resultado -->
-                        <div class="carousel-card">
-                            <span class="badge result">El Resultado</span>
-                            <h3>Claridad y Enfoque Total</h3>
-                            <p>Avanzas sin sobrecarga cognitiva, convirtiendo intenciones abstractas en progreso constante y medible.</p>
-                        </div>
-                    
-                    </div> <!-- /carousel-container -->
-                    <!-- Botones/Controles del Carrusel -->
-                    <div class="carousel-controls">
-                        <button class="btn-prev">&lt;</button>
-                        <button class="btn-next">&gt;</button>
+
+                        <button class="carousel-btn btn-next" aria-label="Siguiente">&gt;</button>
                     </div>
-                
-                </div> <!-- /container -->
-            </section>
-        
-            <section class="beneficios" id="Beneficios">
-                <div class="container">
-                    <h2>Beneficios Clave</h2>
-                
-                    <!-- Contenedor general que agrupa las tarjetas -->
-                    <div class="cards-grid">
-                    
-                        <div class="card">
-                            <div class="card-icon"><img src="assets/images/cerebro.png" alt="Cerebro"></div> <!-- Puedes usar un emoji o un tag <img> con un icono -->
-                            <h3>Cero Sobrecarga Mental</h3>
-                            <p>Enfócate en una sola tarea sencilla a la vez. Olvídate de la ansiedad que genera mirar una lista infinita de pendientes.</p>
-                        </div>
-                    
-                        <!-- Tarjeta 2 -->
-                        <div class="card">
-                            <div class="card-icon"><img src="assets/images/priorizacion_inteligente.png"></div>
-                            <h3>Priorización Inteligente</h3>
-                            <p>Nuestra IA deduce exactamente qué paso debes dar primero, eliminando la duda antes de que empieces a trabajar.</p>
-                        </div>
-                    
-                        <!-- Tarjeta 3 -->
-                        <div class="card">
-                            <div class="card-icon"><img src="assets/images/Progreso_sin_friccion.png" alt="Progreso Sin Fricción"></div>
-                            <h3>Progreso Sin Fricción</h3>
-                            <p>Construye el hábito diario de avanzar de forma constante, convirtiendo intenciones en resultados reales.</p>
-                        </div>
-                    
-                    </div> <!-- /cards-grid -->
+
+                    <div class="carousel-dots" aria-hidden="true">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
                 </div>
             </section>
 
-            <!-- 1. Sección "Cómo funciona" (Paso a Paso) -->
+            <!-- Sección Beneficios Clave -->
+            <section class="beneficios" id="Beneficios">
+                <div class="container">
+                    <h2>Beneficios Clave</h2>
+
+                    <div class="cards-grid">
+
+                        <div class="card">
+                            <div class="card-icon"><img src="assets/images/cerebro.png" alt="Icono de cerebro"></div>
+                            <h3>Cero Sobrecarga Mental</h3>
+                            <p>Enfócate en una sola tarea sencilla a la vez. Olvídate de la ansiedad que genera mirar una lista infinita de pendientes.</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-icon"><img src="assets/images/Priorizacion_Inteligente.png" alt="Icono de priorización inteligente"></div>
+                            <h3>Priorización Inteligente</h3>
+                            <p>Nuestra IA deduce exactamente qué paso debes dar primero, eliminando la duda antes de que empieces a trabajar.</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-icon"><img src="assets/images/Progreso_sin_friccion.png" alt="Icono de progreso sin fricción"></div>
+                            <h3>Progreso Sin Fricción</h3>
+                            <p>Construye el hábito diario de avanzar de forma constante, convirtiendo intenciones en resultados reales.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección ¿Cómo funciona? -->
             <section class="como-funciona" id="Como-funciona">
                 <div class="container">
                     <h2>¿Cómo funciona?</h2>
@@ -117,7 +181,7 @@
                 </div>
             </section>
 
-            <!-- 2. Sección "Para quién es" (Público Objetivo) -->
+            <!-- Sección Comunidad: ¿Para quién es A Priori? -->
             <section class="para-quien" id="Para-quien">
                 <div class="container">
                     <h2>¿Para quién es A Priori?</h2>
@@ -125,21 +189,29 @@
                         <div class="card">
                             <h3>Estudiantes</h3>
                             <p>Ideal para organizar entregas de proyectos grandes o estudiar para exámenes sin dejarlo para la última noche.</p>
+                            <div class="card-icon"><img src="assets/images/estudiante.png" alt="Ilustración de un estudiante"></div>
                         </div>
                         <div class="card">
                             <h3>Desarrolladores y Creadores</h3>
                             <p>Para desglosar proyectos de software o contenido en entregables diarios y ejecutables.</p>
+                            <div class="card-icon"><img src="assets/images/developer.png" alt="Ilustración de un desarrollador"></div>
                         </div>
                         <div class="card">
                             <h3>Emprendedores</h3>
                             <p>Avanza en la construcción de tu idea de negocio un paso a la vez, manteniendo el enfoque en lo prioritario.</p>
+                            <div class="card-icon"><img src="assets/images/emprendedor.png" alt="Ilustración de una emprendedora"></div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-        <footer>
-            <p>&copy; 2026 A Priori. Todos los derechos reservados.</p>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2026 A Priori. Todos los derechos reservados.</p>
+            </div>
         </footer>
+
+        <script src="assets/scripts/main.js"></script>
     </body>
 </html>
