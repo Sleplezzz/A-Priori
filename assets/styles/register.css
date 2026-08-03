@@ -1,0 +1,201 @@
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 48px 24px;
+}
+
+.register-card {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 48px 64px 56px;
+}
+
+/* ---- Enlace Volver ---- */
+.register-card .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--purple-500);
+    margin-bottom: 8px;
+}
+
+.register-card .back-link:hover {
+    opacity: 0.8;
+}
+
+/* ---- Encabezado ---- */
+.register-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.register-header h1 {
+    color: #6067A4;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.register-header p {
+    color: var(--text-body);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.register-header p a {
+    color: #6067A4;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* ---- Formulario ---- */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-body);
+}
+
+.form-group input {
+    width: 100%;
+    font-family: var(--font-base);
+    font-size: 1rem;
+    color: var(--text-body);
+    padding: 16px 22px;
+    border: 2px solid #6067A4;
+    border-radius: var(--radius-pill);
+    background-color: var(--white);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input::placeholder {
+    color: #9a9ea8;
+}
+
+.form-group input:focus {
+    border-color: var(--navy-900);
+    box-shadow: 0 0 0 3px rgba(46, 51, 87, 0.12);
+}
+
+/* ---- Campo de contraseña con icono ---- */
+.password-group .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-group .input-wrapper input {
+    padding-right: 54px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a8ea0;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: var(--navy-900);
+}
+
+.toggle-password svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ---- Botón principal ---- */
+.register-form .btn-primary {
+    width: 100%;
+    padding: 18px;
+    border-radius: var(--radius-pill);
+    font-size: 1.05rem;
+    margin-top: 8px;
+}
+
+/* ---- Separador 'O' ---- */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--gray-100);
+}
+
+/* ---- Botón de Google ---- */
+.btn-google {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: var(--white);
+    border: 2px solid #e8683f;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: 1rem;
+    color: #e8683f;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-google:hover {
+    background-color: #fef3ef;
+    transform: translateY(-1px);
+}
+
+.btn-google img {
+    width: 45px;
+    height: 22px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+    .register-card {
+        padding: 36px 24px 44px;
+    }
+
+    .register-header h1 {
+        font-size: 1.9rem;
+    }
+}
